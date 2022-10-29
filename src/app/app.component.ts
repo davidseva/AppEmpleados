@@ -7,7 +7,7 @@ import { Empleado } from './empleado.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Listado de Empleados';
+  titulo = 'Listado de Empleados';
 
   empleados:Empleado[]=[ //array de empleados
   new Empleado("David","Seva","Presidente",8500),
@@ -15,5 +15,16 @@ export class AppComponent {
   new Empleado("Laura","Martínez","Directora",5500),
   new Empleado("Violeta","Mas","Limpiadora",600)
 
-  ] 
+  ];
+
+  agregarEmpleado(){
+    let miEmpleado=new Empleado(this.cuadroNombre, this.cuadroApellido, this.cuadroCargo, this.cuadroSalario)
+    this.empleados.push(miEmpleado);
+  }
+
+  cuadroNombre:string="";
+  cuadroApellido:string="";
+  cuadroCargo:string="";
+  cuadroSalario:number=0;
+
 }
