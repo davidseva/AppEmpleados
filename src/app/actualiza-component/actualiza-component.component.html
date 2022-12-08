@@ -20,9 +20,11 @@
     </div>
 
     <div class="col">
-      <button type="submit" class="btn btn-primary" (click)="actualizaEmpleado()" style="margin-top:35px; margin-right:50px;">Actualizar</button>
+      <div>
+        <button  type="submit" class="btn btn-primary"  (click)="actualizaEmpleado()" style="margin-top:35px; margin-right:50px;" name="btnAccion">{{btnAccion}}</button>
+      </div>
 
-      <button type="submit" class="btn btn-primary" (click)="eliminaEmpleado()" style="margin-top:35px;">Eliminar</button>
+      <!-- <button type="submit" class="btn btn-primary" (click)="eliminaEmpleado()" style="margin-top:35px;">Eliminar</button> -->
     </div>
     
   </form>
